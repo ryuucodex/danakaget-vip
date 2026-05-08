@@ -213,7 +213,7 @@
 
         function doShare() {
             const num = document.getElementById('danaInput').value;
-            const msg = encodeURIComponent(` *DANA KAGET Rp ${selectedNominal}*\n\nGue baru aja dapet saldo gratis buat nomor ${num}!\n\nKlaim jatah lo di sini sebelum kehabisan: https://dana-kaget-yoshi.com`);
+            const msg = encodeURIComponent(`*DANA KAGET Rp ${selectedNominal}*\n\nGue baru aja dapet saldo gratis buat nomor ${num}!\n\nKlaim jatah lo di sini sebelum kehabisan: https://danakaget-vip.vercel.app`);
             window.open(`https://api.whatsapp.com/send?text=${msg}`, '_blank');
             
             if(shareProgress < 100) {

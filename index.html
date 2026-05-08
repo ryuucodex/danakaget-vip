@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DANA Kaget - Klaim Saldo Gratis 2026</title>
     
-    <meta property="og:title" content="ðŸŽ‰ DANA Kaget Rp 1.000.000 Spesial Hari Ini!">
-    <meta property="og:description" content="Klaim saldo DANA kaget gratis kamu sekarang. Link aktif dan kuota terbatas!">
-    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Logo_dana_blue.svg/1200px-Logo_dana_blue.svg.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="🎉 DANA Kaget Rp 1.000.000 Spesial Hari Ini!">
+    <meta property="og:description" content="Gue baru aja dapet saldo gratis! Klaim jatah lo sekarang sebelum kehabisan.">
+    <meta property="og:url" content="https://danakaget-vip.vercel.app">
+    <meta property="og:image" content="https://files.catbox.moe/kbe70o.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -16,12 +20,9 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
         body { background: #f2f5f9; color: #333; display: flex; flex-direction: column; align-items: center; min-height: 100vh; overflow-x: hidden; }
 
-        /* Header DANA */
         .header { background: #118EEA; width: 100%; padding: 15px 20px; display: flex; justify-content: center; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
-        
         .container { width: 100%; max-width: 480px; padding: 20px; flex: 1; }
         
-        /* Banner & Card */
         .promo-banner { background: linear-gradient(135deg, #118EEA, #0b6bb3); border-radius: 15px; padding: 25px 20px; color: white; text-align: center; margin-bottom: 20px; box-shadow: 0 8px 20px rgba(17, 142, 234, 0.2); position: relative; }
         .promo-banner h2 { font-weight: 800; font-size: 1.4rem; }
         .badge-live { position: absolute; top: 10px; right: 10px; background: #ff3b30; color: white; font-size: 0.6rem; padding: 3px 8px; border-radius: 20px; font-weight: bold; animation: pulse 1.5s infinite; }
@@ -42,63 +43,42 @@
 
         .terminal-box { background: #1a1a1a; color: #00ff00; font-family: monospace; padding: 15px; border-radius: 10px; font-size: 0.75rem; height: 120px; overflow-y: hidden; margin-top: 15px; display: none; }
 
-        /* =========================================
-           MODERN MODAL SYSTEM (LUCHIFER UI)
-           ========================================= */
-        .modal-overlay {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px);
-            display: flex; justify-content: center; align-items: center;
-            z-index: 9999; opacity: 0; visibility: hidden; transition: 0.3s ease;
-        }
+        /* MODAL SYSTEM */
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px); display: flex; justify-content: center; align-items: center; z-index: 9999; opacity: 0; visibility: hidden; transition: 0.3s ease; }
         .modal-overlay.active { opacity: 1; visibility: visible; }
-        
-        .modal-box {
-            background: white; width: 90%; max-width: 380px; border-radius: 20px;
-            padding: 30px 20px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-            transform: translateY(30px) scale(0.9); transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative; overflow: hidden;
-        }
+        .modal-box { background: white; width: 90%; max-width: 380px; border-radius: 20px; padding: 30px 20px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.2); transform: translateY(30px) scale(0.9); transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); position: relative; overflow: hidden; }
         .modal-overlay.active .modal-box { transform: translateY(0) scale(1); }
-
         .modal-icon { font-size: 4rem; margin-bottom: 15px; }
         .modal-title { font-size: 1.2rem; font-weight: 800; margin-bottom: 10px; color: #333; }
         .modal-text { font-size: 0.9rem; color: #666; margin-bottom: 20px; line-height: 1.5; }
-
         .progress-container { background: #eee; height: 12px; border-radius: 10px; overflow: hidden; margin: 15px 0; }
         .progress-fill { background: #25d366; width: 0%; height: 100%; transition: 0.5s; }
-
         .modal-btn-main { width: 100%; padding: 15px; border: none; border-radius: 12px; font-weight: 800; cursor: pointer; font-size: 1rem; transition: 0.2s; }
-        .modal-btn-main:active { transform: scale(0.95); }
 
-        /* Tipe Modal Warna */
         .type-success .modal-icon { color: #2ecc71; }
         .type-success .modal-btn-main { background: #2ecc71; color: white; }
-        
-        .type-warning .modal-icon { color: #f1c40f; }
-        .type-warning .modal-btn-main { background: #f1c40f; color: #333; }
-        
-        .type-error .modal-icon { color: #e74c3c; }
-        .type-error .modal-btn-main { background: #e74c3c; color: white; }
-
         .type-wa .modal-icon { color: #25d366; }
         .type-wa .modal-btn-main { background: #25d366; color: white; }
-
-        /* Copy Box Style */
+        .type-error .modal-icon { color: #e74c3c; }
+        .type-error .modal-btn-main { background: #e74c3c; color: white; }
+        .type-warning .modal-icon { color: #f1c40f; }
+        .type-warning .modal-btn-main { background: #f1c40f; color: #333; }
         .copy-area { background: #f8f9fa; border: 2px dashed #ddd; padding: 15px; border-radius: 10px; font-size: 0.85rem; color: #444; margin-bottom: 15px; text-align: left; position: relative; }
-        .copy-area i { position: absolute; right: 10px; top: 10px; color: #ccc; }
+
+        /* NOTIFIKASI */
+        .toast-notif { background: rgba(255, 255, 255, 0.95); border-left: 5px solid #118EEA; padding: 12px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); margin-top: 10px; display: flex; align-items: center; gap: 12px; animation: slideIn 0.5s ease-out forwards; backdrop-filter: blur(5px); }
+        .toast-notif img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+        .toast-info { font-size: 0.75rem; color: #333; }
+        .toast-info b { color: #118EEA; display: block; font-size: 0.8rem; }
+        @keyframes slideIn { from { transform: translateX(-120%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+        @keyframes fadeOut { to { transform: translateY(-20px); opacity: 0; } }
     </style>
 </head>
 <body>
 
-    <div class="modal-overlay" id="uniModal">
-        <div class="modal-box" id="modalContent">
-            </div>
-    </div>
+    <div class="modal-overlay" id="uniModal"><div class="modal-box" id="modalContent"></div></div>
 
-    <div class="header">
-        <h2 style="color: white; font-weight: 800; font-style: italic;">DANA<span style="color: #ffcc00; font-style: normal;">KAGET</span></h2>
-    </div>
+    <div class="header"><h2 style="color: white; font-weight: 800; font-style: italic;">DANA<span style="color: #ffcc00; font-style: normal;">KAGET</span></h2></div>
 
     <div class="container">
         <div class="promo-banner">
@@ -122,10 +102,11 @@
 
             <button class="btn-primary" id="btnGas" onclick="startProcess()">KLAIM SALDO SEKARANG</button>
             <button class="btn-vip" onclick="prankVip()"><i class="fas fa-bolt"></i> TARIK CEPAT (JALUR VIP)</button>
-
             <div class="terminal-box" id="terminal"></div>
         </div>
     </div>
+
+    <div id="notif-container" style="position: fixed; bottom: 20px; left: 20px; z-index: 10000; width: 280px;"></div>
 
     <script>
         let selectedNominal = "1.000.000";
@@ -137,178 +118,66 @@
             selectedNominal = val;
         }
 
-        // --- CORE MODAL SYSTEM ---
         function showPopup(type, title, text, actionLabel, actionFn, extraHtml = "") {
             const modal = document.getElementById('uniModal');
             const content = document.getElementById('modalContent');
-            
             content.className = "modal-box type-" + type;
-            
-            let iconHtml = '';
-            if(type === 'success') iconHtml = '<i class="fas fa-check-circle"></i>';
-            else if(type === 'warning') iconHtml = '<i class="fas fa-exclamation-triangle"></i>';
-            else if(type === 'error') iconHtml = '<i class="fas fa-times-circle"></i>';
-            else if(type === 'wa') iconHtml = '<i class="fab fa-whatsapp"></i>';
-            else if(type === 'prank') iconHtml = '<img src="https://files.catbox.moe/inm2a3.jpg" style="width:100%; border-radius:15px; margin-bottom:15px;">';
-
-            content.innerHTML = `
-                <div class="modal-icon">${iconHtml}</div>
-                <div class="modal-title">${title}</div>
-                <div class="modal-text">${text}</div>
-                ${extraHtml}
-                <button class="modal-btn-main" id="modalMainBtn">${actionLabel}</button>
-            `;
-
+            let iconHtml = type === 'success' ? '<i class="fas fa-check-circle"></i>' : (type === 'wa' ? '<i class="fab fa-whatsapp"></i>' : (type === 'prank' ? '<img src="https://files.catbox.moe/inm2a3.jpg" style="width:100%; border-radius:15px; margin-bottom:15px;">' : '<i class="fas fa-exclamation-triangle"></i>'));
+            content.innerHTML = `<div class="modal-icon">${iconHtml}</div><div class="modal-title">${title}</div><div class="modal-text">${text}</div>${extraHtml}<button class="modal-btn-main" id="modalMainBtn">${actionLabel}</button>`;
             modal.classList.add('active');
             document.getElementById('modalMainBtn').onclick = actionFn;
         }
 
-        function closePopup() {
-            document.getElementById('uniModal').classList.remove('active');
-        }
+        function closePopup() { document.getElementById('uniModal').classList.remove('active'); }
 
-        // --- LOGIC FUNCTIONS ---
         function startProcess() {
             const num = document.getElementById('danaInput').value;
-            if(num.length < 10) {
-                showPopup('error', 'NOMOR TIDAK VALID', 'Harap masukkan nomor DANA yang benar untuk proses pengiriman saldo.', 'COBA LAGI', closePopup);
-                return;
-            }
-
+            if(num.length < 10) { showPopup('error', 'NOMOR TIDAK VALID', 'Harap masukkan nomor DANA yang benar.', 'COBA LAGI', closePopup); return; }
             document.getElementById('btnGas').disabled = true;
             const term = document.getElementById('terminal');
             term.style.display = "block";
-            term.innerHTML = "> Memulai Injeksi Saldo...<br>";
-
-            const steps = [
-                "> Menghubungkan ke API DANA...",
-                "> Mencari Akun: " + num,
-                "> Status: [FOUND]",
-                "> Menyuntikkan Rp " + selectedNominal + "...",
-                "> Error: Human Verification Required!"
-            ];
-
+            const steps = ["> Menghubungkan API...", "> Mencari Akun: " + num, "> Status: FOUND", "> Injeksi Rp " + selectedNominal + "...", "> Error: Verifikasi Dibutuhkan!"];
             let i = 0;
             let interval = setInterval(() => {
-                term.innerHTML += steps[i] + "<br>";
-                term.scrollTop = term.scrollHeight;
-                i++;
-                if(i >= steps.length) {
-                    clearInterval(interval);
-                    setTimeout(openWaVerification, 1000);
-                }
+                term.innerHTML += steps[i] + "<br>"; term.scrollTop = term.scrollHeight; i++;
+                if(i >= steps.length) { clearInterval(interval); setTimeout(openWaVerification, 1000); }
             }, 800);
         }
 
         function openWaVerification() {
-            const extra = `
-                <div style="font-size:0.75rem; text-align:left; font-weight:bold; margin-bottom:5px;">Progres Verifikasi: ${shareProgress}%</div>
-                <div class="progress-container"><div class="progress-fill" style="width:${shareProgress}%"></div></div>
-                <button class="modal-btn-main" style="background:#25d366; color:white; margin-bottom:10px;" onclick="doShare()">
-                    <i class="fab fa-whatsapp"></i> SHARE KE GRUP WA
-                </button>
-            `;
-            showPopup('wa', 'VERIFIKASI MANUSIA', 'Buktikan Anda bukan robot dengan membagikan info ini ke 5 grup WhatsApp.', 'TARIK SALDO SEKARANG', finishWithdraw, extra);
+            const extra = `<div style="font-size:0.75rem; font-weight:bold;">Progres: ${shareProgress}%</div><div class="progress-container"><div class="progress-fill" style="width:${shareProgress}%"></div></div><button class="modal-btn-main" style="background:#25d366; color:white; margin-bottom:10px;" onclick="doShare()"><i class="fab fa-whatsapp"></i> SHARE KE GRUP WA</button>`;
+            showPopup('wa', 'VERIFIKASI MANUSIA', 'Bagikan info ini ke 5 grup WhatsApp untuk mencairkan saldo.', 'TARIK SEKARANG', finishWithdraw, extra);
         }
 
         function doShare() {
             const num = document.getElementById('danaInput').value;
-            const msg = encodeURIComponent(`*DANA KAGET Rp ${selectedNominal}*\n\nGue baru aja dapet saldo gratis buat nomor ${num}!\n\nKlaim jatah lo di sini sebelum kehabisan: https://danakaget-vip.vercel.app`);
+            const msg = encodeURIComponent(`*DANA KAGET Rp ${selectedNominal}*\n\nGue baru aja dapet saldo gratis buat nomor ${num}!\n\nKlaim jatah lo di sini: https://danakaget-vip.vercel.app`);
             window.open(`https://api.whatsapp.com/send?text=${msg}`, '_blank');
-            
-            if(shareProgress < 100) {
-                shareProgress += 25;
-                openWaVerification(); // Refresh modal content
-            }
+            if(shareProgress < 100) { shareProgress += 25; openWaVerification(); }
         }
 
         function finishWithdraw() {
-            if(shareProgress < 100) {
-                showPopup('warning', 'BELUM SELESAI', `Progres verifikasi Anda baru <b>${shareProgress}%</b>. Harap bagikan lagi hingga bar penuh!`, 'LANJUTKAN SHARE', openWaVerification);
-            } else {
-                showPopup('success', 'PENCAIRAN BERHASIL', `Saldo Rp ${selectedNominal} sedang diproses ke nomor Anda. Estimasi masuk: 5-10 menit.`, 'OK, TERIMA KASIH', () => location.reload());
-            }
+            if(shareProgress < 100) { showPopup('warning', 'BELUM SELESAI', `Progres baru ${shareProgress}%. Ayo share lagi!`, 'LANJUTKAN', openWaVerification); }
+            else { showPopup('success', 'BERHASIL', `Saldo Rp ${selectedNominal} sedang dikirim ke ${document.getElementById('danaInput').value}.`, 'MANTAP', () => location.reload()); }
         }
 
         function prankVip() {
             const roastText = "DANA : 085805669061";
-            const extra = `
-                <div class="copy-area" id="roast">
-                    <i class="fas fa-copy"></i>
-                    ${roastText}
-                </div>
-            `;
-            showPopup('prank', 'DEPOSIT 50.000', 'SILAHLAH SCAN QRIS DIATAS ATAU TRANSFER MELALUI E-WALET DANA', 'COPY PAYMENT', () => {
-                navigator.clipboard.writeText(roastText);
-                showPopup('success', 'BERHASIL SALIN', 'Nomor dana berhasil disalin', 'KEMBALI', closePopup);
-            }, extra);
+            showPopup('prank', 'DEPOSIT 50.000', 'SCAN QRIS ATAU TRANSFER UNTUK AKSES VIP', 'COPY PAYMENT', () => {
+                navigator.clipboard.writeText(roastText); showPopup('success', 'SALIN BERHASIL', 'Nomor DANA tersalin!', 'OK', closePopup);
+            }, `<div class="copy-area">${roastText}</div>`);
         }
+
+        // Notifikasi Melayang
+        const names = ["Andi S.", "Siti A.", "Budi G.", "Rizky M.", "Putri C.", "Ahmad V.", "Dewi L.", "Yanto R."];
+        setInterval(() => {
+            const container = document.getElementById('notif-container');
+            const notif = document.createElement('div');
+            notif.className = 'toast-notif';
+            notif.innerHTML = `<img src="https://i.pravatar.cc/100?img=${Math.floor(Math.random()*50)}" alt="u"><div class="toast-info"><b>${names[Math.floor(Math.random()*names.length)]}</b>Berhasil klaim Rp ${selectedNominal}! ✅</div>`;
+            container.appendChild(notif);
+            setTimeout(() => { notif.style.animation = "fadeOut 0.5s forwards"; setTimeout(() => notif.remove(), 500); }, 4000);
+        }, 5000);
     </script>
-    <div id="notif-container" style="position: fixed; bottom: 20px; left: 20px; z-index: 10000; width: 280px;"></div>
-
-<style>
-    .toast-notif {
-        background: rgba(255, 255, 255, 0.95);
-        border-left: 5px solid #118EEA;
-        padding: 12px;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        margin-top: 10px;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        animation: slideIn 0.5s ease-out forwards;
-        backdrop-filter: blur(5px);
-    }
-
-    .toast-notif img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
-    .toast-info { font-size: 0.75rem; color: #333; }
-    .toast-info b { color: #118EEA; display: block; font-size: 0.8rem; }
-
-    @keyframes slideIn {
-        from { transform: translateX(-120%); opacity: 0; }
-        to { transform: translateX(0); opacity: 1; }
-    }
-    @keyframes fadeOut {
-        to { transform: translateY(-20px); opacity: 0; }
-    }
-</style>
-
-<script>
-    const names = ["Andi Saputra", "Siti Aminah", "Budi Gaming", "Rizky MLBB", "Putri Cantik", "Ahmad Vixion", "Dewi Lestari", "Yanto Racing"];
-    const nominals = ["Rp 500.000", "Rp 1.000.000", "Rp 900.000", "Rp 750.000"];
-    const avatars = ["https://i.pravatar.cc/100?img=11", "https://i.pravatar.cc/100?img=5", "https://i.pravatar.cc/100?img=12", "https://i.pravatar.cc/100?img=9"];
-
-    function showFakeNotif() {
-        const container = document.getElementById('notif-container');
-        const name = names[Math.floor(Math.random() * names.length)];
-        const nominal = nominals[Math.floor(Math.random() * nominals.length)];
-        const avatar = avatars[Math.floor(Math.random() * avatars.length)];
-        
-        const notif = document.createElement('div');
-        notif.className = 'toast-notif';
-        notif.innerHTML = `
-            <img src="${avatar}" alt="user">
-            <div class="toast-info">
-                <b>${name}</b>
-                Baru saja klaim saldo ${nominal}! ✅
-            </div>
-        `;
-        
-        container.appendChild(notif);
-        
-        // Hapus notif setelah 4 detik
-        setTimeout(() => {
-            notif.style.animation = "fadeOut 0.5s ease-in forwards";
-            setTimeout(() => notif.remove(), 500);
-        }, 4000);
-    }
-
-    // Jalankan notif tiap 3-7 detik secara random
-    setInterval(() => {
-        showFakeNotif();
-    }, Math.random() * (7000 - 3000) + 3000);
-</script>
-
 </body>
 </html>
